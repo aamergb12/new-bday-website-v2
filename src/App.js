@@ -152,7 +152,7 @@ const flipCoin = () => {
       .to(".our-work-txt", { height: "60vh" }, "height")
       .to("#our", { left: "0%" }, "height")
       .to("#work", { right: "0%" }, "height")
-      .to(".scroll-img", { marginTop: "-1338%" });
+      .to(".scroll-img", { marginTop: "-1368%" });
 
     return () => {
       // Clean up on component unmount
