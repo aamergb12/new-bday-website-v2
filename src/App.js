@@ -139,12 +139,12 @@ const App = () => {
     <div id="main">
       <nav>
         <div className="lft-nav">
-          <h1 id="logo">Demo</h1>
-          <h1>landing</h1>
+          <h1 id="logo">I love you so much</h1>
+          <h1>{`    <3`}</h1>
         </div>
         <div className="rght-nav">
-          <h2 id="nav-contact">Sudeep Acharjee</h2>
-          <h2>sudeepachrjeegp@gmail.com</h2>
+          <h2 id="nav-contact">By Aamer Goual Belhamidi</h2>
+          <h2>agbelhamidi@gmail.com</h2>
         </div>
       </nav>
 
@@ -163,7 +163,7 @@ const App = () => {
             ))}
           </div>
           <div className="overlay-div">
-            <h1>Landing Page</h1>
+            <h1>HAPPY BIRTHDAY!!!!</h1>
             <div className="scroll-down">
               <h3>SCROLL DOWN</h3>
               <div className="scroll-p">
@@ -181,12 +181,12 @@ const App = () => {
         </div>
         <div className="content-2">
           <div className="text-area">
-            <h1>Strategic design solutions</h1>
-            <h2>that fuel your bottom line.</h2>
+            <h1>big 21 for the strongest</h1>
+            <h2>girl i know</h2>
           </div>
           <div className="text-area-hover">
-            <h1>Strategic design solutions</h1>
-            <h2>that fuel your bottom line.</h2>
+            <h1>big 21 for the strongest</h1>
+            <h2>girl i know</h2>
           </div>
         </div>
       </div>
@@ -211,11 +211,11 @@ const App = () => {
           </div>
         </div>
         <div className="btm-part-3">
-          <img src="/Assets/Images/apple.svg" alt="Apple" />
-          <img src="/Assets/Images/dell.svg" alt="Dell" />
-          <img src="/Assets/Images/hp.svg" alt="HP" />
-          <img src="/Assets/Images/ibm.svg" alt="IBM" />
-          <img src="/Assets/Images/orbal.svg" alt="Orbal" />
+          <img src="/Assets/Images/15.jpg" alt="Apple" />
+          <img src="/Assets/Images/16.jpg" alt="Dell" />
+          <img src="/Assets/Images/17.jpg" alt="HP" />
+          <img src="/Assets/Images/18.jpg" alt="IBM" />
+          <img src="/Assets/Images/19.jpg" alt="Orbal" />
         </div>
       </div>
 
