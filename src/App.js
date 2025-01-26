@@ -179,7 +179,7 @@ const flipCoin = () => {
           <div className="rotate-div">
             {[...Array(5)].map((_, idx) => (
               <div key={idx} id={`row-div-${idx + 1}`} className="row-div">
-                {[1, 2, 3, 4].map((imgIdx) => (
+                {[1, 4, 3, 2].map((imgIdx) => (
                   <div key={imgIdx} className="img-div">
                     <img src={`/Assets/Images/${imgIdx}.jpg`} alt={`Image ${imgIdx}`} />
                   </div>

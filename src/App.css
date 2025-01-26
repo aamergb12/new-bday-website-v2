@@ -312,18 +312,21 @@ nav {
   align-items: center;       /* Center images vertically */
   justify-content: space-around; /* Distribute images evenly */
   width: 100%;
-  height: 250px;              /* Increase the height of the black bar */
+  height: 450px;              /* Increase the height of the black bar */
   background-color: #000;     /* Retain the black background */
-  padding: 10px;              /* Add spacing around the row */
-  overflow: visible;          /* Prevent clipping of images */
+  padding: 40px;              /* Add spacing around the row */
+
+  box-sizing: border-box;          /* Prevent clipping of images */
 }
 
 .btm-part-3 img {
   width: auto;                /* Maintain proportional width */
   height: 80%;                /* Scale the images relative to the bar's height */
-  object-fit: contain;        /* Ensure the images maintain their aspect ratio */
-  margin: 0 10px;             /* Add spacing between images */
+  object-fit: cover;        /* Ensure the images maintain their aspect ratio */
+  margin: 10px;            /* Add spacing between images */
+  border-radius: 50px;
 }
+
 
 
 /* ------------part-4---------- */
