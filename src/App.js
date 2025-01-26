@@ -181,7 +181,7 @@ const flipCoin = () => {
               <div key={idx} id={`row-div-${idx + 1}`} className="row-div">
                 {[1, 4, 3, 2].map((imgIdx) => (
                   <div key={imgIdx} className="img-div">
-                    <img src={`/Assets/Images/${imgIdx}.jpg`} alt={`Image ${imgIdx}`} />
+                    <img src={`/Assets/Images/${imgIdx}.jpg`} alt={`Gallery Item ${imgIdx}`} />
                   </div>
                 ))}
               </div>
@@ -325,7 +325,7 @@ const flipCoin = () => {
           <div className="scroll-work">
             <div className="scroll-img">
               {[1, 2, 5, 6, 7, 8, 10, 11, 12, 13, 14].map((imgIdx) => (
-                <img key={imgIdx} src={`/Assets/Images/${imgIdx}.jpg`} alt={`Image ${imgIdx}`} />
+                <img key={imgIdx} src={`/Assets/Images/${imgIdx}.jpg`} alt={`Gallery Items ${imgIdx}`} />
               ))}
             </div>
           </div>
