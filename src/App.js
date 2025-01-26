@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
@@ -7,6 +7,35 @@ import "./App.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
+
+const [flipping, setFlipping] = useState(false); // To control animation
+const [result, setResult] = useState(""); // Stores heads/tails result
+  
+const flipCoin = () => {
+  if (flipping) return; // Prevent clicking mid-flip
+  setFlipping(true);
+
+  // Simulate coin flip
+  const outcome = Math.random() > 0.5 ? "Heads" : "Tails";
+
+  // Apply flipping animation
+  const coin = document.querySelector(".coin");
+  coin.style.transform = "rotateY(1800deg)"; // Spins multiple times
+
+  setTimeout(() => {
+    // Set final rotation based on outcome
+    if (outcome === "Heads") {
+      coin.style.transform = "rotateY(0deg)"; // Show heads side
+    } else {
+      coin.style.transform = "rotateY(180deg)"; // Show tails side
+    }
+
+    setResult(outcome); // Update result
+    setFlipping(false); // Stop flipping animation
+  }, 1000); // Matches animation duration
+};
+
+
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
     const lenis = new Lenis();
@@ -104,16 +133,8 @@ const App = () => {
       .to(".part-5 .text-area-hover h2", { delay: -0.4, width: "100%" });
 
     // GSAP Animations for Part 6
-    const tl6 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".part-6",
-        start: "0% 70%",
-        end: "15% 50%",
-        scrub: 1,
-      },
-    });
 
-    tl6.to(".rounded-div-wrapper-6", { height: "0%", marginTop: 0 });
+
 
     // GSAP Animations for Part 7
     const tl7 = gsap.timeline({
@@ -131,7 +152,7 @@ const App = () => {
       .to(".our-work-txt", { height: "60vh" }, "height")
       .to("#our", { left: "0%" }, "height")
       .to("#work", { right: "0%" }, "height")
-      .to(".scroll-img", { marginTop: "-820%" });
+      .to(".scroll-img", { marginTop: "-1338%" });
 
     return () => {
       // Clean up on component unmount
@@ -266,36 +287,32 @@ const App = () => {
       </div>
 
       {/* PART 6 */}
-      <div className="part-6">
-        {[...Array(3)].map((_, idx) => (
-          <div key={idx} className="brand-part-6">
-            <div className="top-brand-part-6">
-              <div className="lft-top-6">
-                <h1>Brand</h1>
-              </div>
-              <div className="rght-top-6">
-                <button>View Pricing</button>
-              </div>
-            </div>
-            <div className="btm-brand-part-6">
-              <div className="lft-btm-6"></div>
-              <div className="rght-btm-6">
-                <h2>1-2 months average / 8 design sprints</h2>
-                <div className="content-rght-btm-6">
-                  <p>
-                    Logo design <br />
-                    Visual Identity <br />
-                    Collateral <br />
-                    Brand Guidelines <br />
-                    Animation <br />
-                    Naming
-                  </p>
-                </div>
-              </div>
-            </div>
+      
+      {/* Heads or Tails Section */}
+
+          <div className="part-coin-flip">
+      <h1>Heads or Tails?</h1>
+      <div className="coin-container">
+        <div
+          className={`coin ${flipping ? "flip" : result === "Heads" ? "show-heads" : "show-tails"}`}
+          onClick={flipCoin}
+        >
+          {/* Heads Side */}
+          <div className="heads">
+            <img src="/Assets/Images/21.jpg" alt="Heads" />
+            <div className="label">H</div>
           </div>
-        ))}
+
+          {/* Tails Side */}
+          <div className="tails">
+            <img src="/Assets/Images/22.jpg" alt="Tails" />
+            <div className="label">T</div>
+          </div>
+        </div>
       </div>
+      {!flipping && result && <h2>It's {result}!</h2>}
+    </div>
+
 
       {/* PART 7 */}
       <div className="part-7">
@@ -307,7 +324,7 @@ const App = () => {
         <div className="our-work-txt-div">
           <div className="scroll-work">
             <div className="scroll-img">
-              {[1, 2, 10, 11, 12, 13, 14].map((imgIdx) => (
+              {[1, 2, 5, 6, 7, 8, 10, 11, 12, 13, 14].map((imgIdx) => (
                 <img key={imgIdx} src={`/Assets/Images/${imgIdx}.jpg`} alt={`Image ${imgIdx}`} />
               ))}
             </div>
