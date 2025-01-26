@@ -250,7 +250,7 @@ nav {
   position: relative;
   width: 100%;
   height: 50vh;
-  background-color: #fff;
+  background: linear-gradient(to right, #fcb8de, #80d0ff, #a780fc); /* Pink to Blue to Purple */
 }
 
 .top-part-3 {
@@ -300,7 +300,7 @@ nav {
 }
 
 .cta-book-2 {
-  background-color: #d1d1d1;
+  background-color: rgb(247, 220, 220);
 }
 
 .cta-book-2 .cta-txt {
@@ -331,7 +331,7 @@ nav {
   display: flex;
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background: linear-gradient(to right, #fcb8de, #80d0ff, #a780fc); /* Pink to Blue to Purple */
   overflow: hidden;
 }
 
@@ -354,7 +354,7 @@ nav {
   justify-content: center;
   width: 7vw;
   height: 7vw;
-  background-color: #f4f4f4;
+  background-color: #c379e8;
   border-radius: 50%;
 }
 
@@ -369,10 +369,8 @@ nav {
 }
 
 .content-rght-part-4 {
-  display: flex;
-  flex-direction: column;
-  gap: 5vh;
-  opacity: 0;
+  opacity: 1 !important;
+  margin-top: 0 !important;
 }
 
 .content-rght-part-4 h1 {
@@ -390,13 +388,30 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center; /* Center content both vertically and horizontally */
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: rgb(185, 180, 199);
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1); /* Smooth gradient flow */
+  background-size: 300% 300%; /* Makes the gradient larger for better transitions */
+  animation: gradientAnimation 10s ease infinite; /* Animated gradient */
   overflow: hidden;
+  color: #fff; /* Text will be white for better contrast */
+  font-family: 'Arial', sans-serif; /* Ensure a clean font is used */
+  text-align: center; /* Center-align text */
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .part-5 p {
   font-size: 2vw;
   font-weight: 600;
@@ -405,12 +420,12 @@ nav {
 }
 
 .part-5 .text-area {
-  left: 20%;
+  left: 10%;
   top: 30%;
 }
 
 .part-5 .text-area-hover {
-  left: 20%;
+  left: 10%;
   top: 30%;
 }
 
@@ -418,29 +433,83 @@ nav {
 
 .part-6 {
   width: 100%;
-  height: 280vh;
-  background-color: #ebebeb;
+  height: auto; /* Adjust height dynamically based on content */
+  background-color: #d6b3ed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+  gap: 5vh; /* Add spacing between brands */
 }
 
-.rounded-div-wrapper-6 {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  margin-top: 100px;
-}
-
-.rounded-div-6 {
-  bottom: 0;
-  position: absolute;
-  left: 50%;
-  width: 150%;
-  height: 750%;
-  border-radius: 50%;
+.brand-part-6 {
+  width: 80%; /* Restrict width for better alignment */
   background-color: #fff;
-  transform: translate(-50%);
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
+.top-brand-part-6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh 4vw;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.lft-top-6 h1 {
+  font-size: 2vw;
+  color: #333;
+}
+
+.rght-top-6 button {
+  padding: 0.8vw 2vw;
+  background-color: #d1d1d1;
+  border: none;
+  border-radius: 50px;
+  font-size: 1vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rght-top-6 button:hover {
+  background-color: #b0b0b0;
+}
+
+.btm-brand-part-6 {
+  display: flex;
+  padding: 2vh 4vw;
+}
+
+.lft-btm-6 {
+  width: 30%;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  height: 10vh; /* Placeholder height */
+}
+
+.rght-btm-6 {
+  width: 70%;
+  padding-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.rght-btm-6 h2 {
+  font-size: 1.5vw;
+  color: #333;
+}
+
+.rght-btm-6 p {
+  font-size: 1vw;
+  color: #666;
+  line-height: 1.5;
+}
 /* PART 7 */
 
 .part-7 {

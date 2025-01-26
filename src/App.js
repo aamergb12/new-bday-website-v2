@@ -66,32 +66,36 @@ const App = () => {
       .to(".content-2 .text-area-hover h2", { delay: -0.4, width: "100%" });
 
     // GSAP Animations for Part 4
-    const tl4 = gsap.timeline({
+
+
+    let tl4 = gsap.timeline({
       scrollTrigger: {
         trigger: ".part-4",
         start: "50% 50%",
         end: "200% 50%",
         pin: true,
+        markers: false, // Debug with markers
         scrub: 1,
       },
     });
-
-    tl4.to(".c-one", { marginTop: "-25%", opacity: "1" }, "sct-1")
-      .to(".c-two", { opacity: "1" }, "sct-2")
-      .to(".c-one", { marginTop: "-100", opacity: "0" }, "sct-2")
-      .to(".c-three", { opacity: "1" }, "sct-3")
-      .to(".c-two", { opacity: "0" }, "sct-3")
-      .to(".c-one", { marginTop: "-180%" }, "sct-3")
-      .to(".c-one", { marginTop: "-230%" }, "sct-4")
-      .to(".c-three", { opacity: "0" }, "sct-4")
-      .to(".cir-part-4", { marginLeft: "100%", rotate: 360 }, "sct-4");
+    
+    tl4
+      .to(".c-one", { marginTop: "-25%", opacity: 1, duration: 1 }, "step-1")
+      .to(".c-two", { opacity: 1, duration: 1 }, "step-2")
+      .to(".c-one", { marginTop: "-100%", opacity: 0, duration: 1 }, "step-2")
+      .to(".c-three", { opacity: 1, duration: 1 }, "step-3")
+      .to(".c-two", { opacity: 0, duration: 1 }, "step-3")
+      .to(".c-one", { marginTop: "-180%", duration: 1 }, "step-3")
+      .to(".c-one", { marginTop: "-230%", duration: 1 }, "step-4")
+      .to(".c-three", { opacity: 0, duration: 1 }, "step-4")
+      .to(".cir-part-4", { marginLeft: "100%", rotate: 360, duration: 2 }, "step-4");
 
     // GSAP Animations for Part 5
     const tl5 = gsap.timeline({
       scrollTrigger: {
         trigger: ".part-5",
         start: "20% 50%",
-        end: "100% 50%",
+        end: "60% 60%",
         scrub: 1,
       },
     });
@@ -123,11 +127,11 @@ const App = () => {
     });
 
     tl7.to("#demo", { bottom: "7%" })
-      .to(".our-work-txt-div", { height: "60vh" }, "height")
+      .to(".our-work-txt-div", { height: "80vh" }, "height")
       .to(".our-work-txt", { height: "60vh" }, "height")
       .to("#our", { left: "0%" }, "height")
       .to("#work", { right: "0%" }, "height")
-      .to(".scroll-img", { marginTop: "-300%" });
+      .to(".scroll-img", { marginTop: "-820%" });
 
     return () => {
       // Clean up on component unmount
@@ -194,18 +198,18 @@ const App = () => {
       {/* PART 3 */}
       <div className="part-3">
         <div className="top-part-3">
-          <h4>Unlock profit with monthly design sprints.</h4>
+          <h4>Inshallah you have the best year of your life!</h4>
           <div className="cta">
             <div className="cta-book">
               <div className="cta-txt">
-                <h2>Book a demo</h2>
-                <h2>Book a demo</h2>
+                <h2>Finally</h2>
+                <h2>Legal</h2>
               </div>
             </div>
             <div className="cta-book cta-book-2">
               <div className="cta-txt">
-                <h2>View Pricing</h2>
-                <h2>View Pricing</h2>
+                <h2>TWENTY</h2>
+                <h2>ONE</h2>
               </div>
             </div>
           </div>
@@ -222,7 +226,7 @@ const App = () => {
       {/* PART 4 */}
       <div className="part-4">
         <div className="lft-part-4">
-          <h1>Expected Outcomes</h1>
+          <h1>HIP HIP HOORAY</h1>
           <div className="cir-part-4">
             <img
               src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64b7d30aa9b24259d10be24d_symbol.svg"
@@ -233,11 +237,15 @@ const App = () => {
         <div className="rght-part-4">
           {[...Array(3)].map((_, idx) => (
             <div key={idx} className={`content-rght-part-4 c-${idx + 1}`}>
-              <h1>Growth and ROI</h1>
+              <h1>You've changed so MUCH!</h1>
               <p>
-                Expect a team that looks at problems holistically. A team that designs solutions
-                directly contributing to your revenue growth and business success - not just
-                pretty pictures.
+                I'm so proud of the person you've become. You've grown so much
+                and I'm so grateful to have you in my life. I love you so much
+                and I hope you have the best year of your life. I can't wait to
+                see what the future holds for you and I made this website to
+                show you how much you mean to me. I hope you enjoy it! Happy
+                Birthday! <br /> <br /> Love, Aamer Goual Belhamidi
+
               </p>
             </div>
           ))}
@@ -248,12 +256,12 @@ const App = () => {
       <div className="part-5">
         <p>In summary..</p>
         <div className="text-area">
-          <h1>A dedicated team at</h1>
-          <h2>your disposal.</h2>
+          <h1>My favorite person in the </h1>
+          <h2>world was born today !</h2>
         </div>
         <div className="text-area-hover">
-          <h1>A dedicated team at</h1>
-          <h2>your disposal.</h2>
+          <h1>My favorite person in the</h1>
+          <h2>world was born today !</h2>
         </div>
       </div>
 
@@ -291,9 +299,10 @@ const App = () => {
 
       {/* PART 7 */}
       <div className="part-7">
-        <div className="our-work-txt">
-          <h1 id="our">Our</h1>
-          <h1 id="work">Work</h1>
+        <div className="our-work-txt" style={{ height: '80vh' }}>
+
+          <h1 id="our">My</h1>
+          <h1 id="work">Baby</h1>
         </div>
         <div className="our-work-txt-div">
           <div className="scroll-work">
@@ -304,7 +313,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <button id="demo">Book a demo</button>
+        <button id="demo">Have a great year!</button>
       </div>
     </div>
   );
