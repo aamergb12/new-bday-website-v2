@@ -260,13 +260,17 @@ const flipCoin = () => {
             <div key={idx} className={`content-rght-part-4 c-${idx + 1}`}>
               <h1>You've changed so MUCH!</h1>
               <p>
-                I'm so proud of the person you've become. You've grown so much
-                and I'm so grateful to have you in my life. I love you so much
-                and I hope you have the best year of your life. I can't wait to
-                see what the future holds for you and I made this website to
-                show you how much you mean to me. I hope you enjoy it! Happy
-                Birthday! <br /> <br /> Love, Aamer Goual Belhamidi
-
+              I'm so proud of the person you've become. You've grown so much
+              and I'm so grateful to have you in my life. I love you so much
+              and I hope you have the best year of your life. I can't wait to
+              see what the future holds for you and I made this website to
+              show you how much you mean to me. From the long distance
+              to the highs and lows I know it was all for a reason and Inshallah
+              that will all be clear soon. You work your ass off day to day and 
+              that’s so incredibly inspiring to see. It’s also your first year coming 
+              into the year as a muslim so congrats ! Let’s crush Ramadan together 
+              and run towards to day we get married. I hope you enjoy this little site!
+               Happy Birthday!  <br /> <br /> Love, Aamer Goual Belhamidi
               </p>
             </div>
           ))}
