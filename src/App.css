@@ -315,15 +315,17 @@ nav {
   height: 450px;              /* Increase the height of the black bar */
   background-color: #000;     /* Retain the black background */
   padding: 40px;              /* Add spacing around the row */
-
+             /* Hide overflowing images */
   box-sizing: border-box;          /* Prevent clipping of images */
 }
 
 .btm-part-3 img {
-  width: auto;                /* Maintain proportional width */
-  height: 80%;                /* Scale the images relative to the bar's height */
+  flex-shrink: 1;
+  max-width: 200px;                /* Maintain proportional width */
+  min-width: 80px;
+  height: auto;                /* Scale the images relative to the bar's height */
   object-fit: cover;        /* Ensure the images maintain their aspect ratio */
-  margin: 10px;            /* Add spacing between images */
+            /* Add spacing between images */
   border-radius: 50px;
 }
 
