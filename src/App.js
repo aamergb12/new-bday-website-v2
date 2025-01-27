@@ -269,7 +269,7 @@ const flipCoin = () => {
               that will all be clear soon. You work your ass off day to day and 
               that’s so incredibly inspiring to see. It’s also your first year coming 
               into the year as a muslim so congrats ! Let’s crush Ramadan together 
-              and run towards to day we get married. I hope you enjoy this little site!
+              and run towards the day we finally get married. I hope you enjoy this little site!
                Happy Birthday!  <br /> <br /> Love, Aamer Goual Belhamidi
               </p>
             </div>
